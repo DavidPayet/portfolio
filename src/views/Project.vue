@@ -339,7 +339,7 @@ onMounted(() => {
   );
   bottom: -1px;
   content: '';
-  height: 300px;
+  height: 270px;
   left: 0;
   position: absolute;
   width: 100%;
@@ -416,12 +416,29 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
+  .project-section {
+    margin-bottom: 140px;
+  }
+
+  .project-hero-inner {
+    padding-bottom: 100px;
+  }
   .project-hero-title {
     font-size: calc(13vw - 10px);
   }
 
+  .button.source-code {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .project-image:before {
+    height: 200px;
+  }
+
   .project-hero-role {
     margin-bottom: 50px;
+    font-size: calc(4vw);
   }
 
   .caption-title,
