@@ -122,14 +122,14 @@ const summaryMenuContent = ref(null)
 const underline = ref(null)
 
 const preloadImg = (url) => {
-  projects.forEach((project) => {
-    const img = new Image()
-    img.src = url
-  })
+  const img = new Image()
+  img.src = url
 }
 
 onMounted(() => {
-  preloadImg(project.project_picture_xl)
+  projects.forEach((project) => {
+    preloadImg(project.project_picture_xl)
+  })
 
   const tlProjectHero = gsap.timeline()
 
@@ -139,7 +139,7 @@ onMounted(() => {
       opacity: 0,
       duration: 2,
       ease: 'power4.out',
-    }, '-=.5')
+    })
     .from(
       projectTitle.value,
       {
