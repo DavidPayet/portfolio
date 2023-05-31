@@ -31,6 +31,7 @@
           :src="findProject.project_picture_xl"
           :alt="findProject.title"
           ref="projectImg"
+          rel="preload"
         />
       </figure>
     </header>
