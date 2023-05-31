@@ -405,6 +405,10 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
+  .project-hero-title {
+    font-size: calc(13vw - 10px);
+  }
+  
   .caption-title,
   .project-content {
     font-size: 16px;
