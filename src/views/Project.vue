@@ -125,7 +125,6 @@ const preloadImg = (url) => {
   projects.forEach((project) => {
     const img = new Image()
     img.src = url
-    console.log(project.project_picture_xl)
   })
 }
 
@@ -140,7 +139,7 @@ onMounted(() => {
       opacity: 0,
       duration: 2,
       ease: 'power4.out',
-    })
+    }, '-=.5')
     .from(
       projectTitle.value,
       {
