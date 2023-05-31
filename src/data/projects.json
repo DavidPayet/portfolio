@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Booki",
+    "project_picture": "/assets/booki.jpg",
+    "project_picture_xl": "/assets/xl/booki.jpg",
+    "project_link": "https://davidpayet.github.io/Booki/",
+    "source_code": "https://github.com/DavidPayet/Booki",
+    "role": "Intégration maquette",
+    "project_type": "de formation",
+    "description1": "Booki est une entreprise qui propose un outil de planification de vacances en ligne. En tant que stagiaire développeur web, ma mission à été de réaliser une première version d'un prototype en intégrant les maquettes en HTML et CSS afin de faire valider le futur design de Booki.",
+    "description2": "Le site est adaptable à tout type d'écran. Le code est valide au W3C et est compatible avec les dernières versions de Google Chrome et Mozilla Firefox."
+  },
+  {
+    "id": 2,
+    "title": "Ohmyfood",
+    "project_picture": "/assets/ohmyfood.jpg",
+    "project_picture_xl": "/assets/xl/ohmyfood.jpg",
+    "project_link": "https://davidpayet.github.io/ohmyfood/",
+    "source_code": "https://github.com/DavidPayet/ohmyfood",
+    "role": "Développement mobile",
+    "project_type": "de formation",
+    "description1": "Ohmyfood! est une entreprise de commande de repas en ligne visant à permet aux utilisateurs de composer leur propre menu en amont afin de réduire leur temps d’attente dans les restaurants. En tant que développeur web junior, ma mission à été de développer un site mobile en intégrant les maquettes en HTML et CSS.",
+    "description2": "Le site est néanmoins adaptable au format tablette et desktop. Le code est valide au W3C et est compatible avec les dernières versions de Google Chrome et Mozilla Firefox."
+  },
+  {
+    "id": 3,
+    "title": "La panthère",
+    "project_picture": "/assets/la-panthere.jpg",
+    "project_picture_xl": "/assets/xl/la-panthere.jpg",
+    "project_link": "https://davidpayet.github.io/la_panthere_web_site/",
+    "source_code": "https://github.com/DavidPayet/la_panthere_web_site",
+    "role": "SEO, accessibilité, performance",
+    "project_type": "de formation",
+    "description1": "La Panthère est une agence de web design basée à Lyon qui avait constaté une perte de vitesse et n'apparaissait seulement qu'en deuxième page des moteurs de recherche. L'objectif à été de mener les actions nécessaires pour que le site puisse bénéficier d'un meilleur référencement.",
+    "description2": "Une analyse de l'état général du site en terme de SEO, accessibilité et performance a été réalisé afin de détecter les problèmes, recommander et appliquer les actions à mener pour finalement proposer la version améliorée du site."
+  },
+  {
+    "id": 4,
+    "title": "Kanap",
+    "project_picture": "/assets/kanap.jpg",
+    "project_picture_xl": "/assets/xl/kanap.jpg",
+    "source_code": "https://github.com/DavidPayet/kanap-web-site",
+    "role": "Intégration API",
+    "project_type": "de formation",
+    "description1": "Kanap est une marque de canapés qui a souhaité bénéficier d’une plateforme e-commerce en plus de sa boutique physique pour vendre ses produits. En tant que développeur en agence, ma mission consistait à intégrer dynamiquement des éléments de l’API dans les différentes pages web avec JavaScript.",
+    "description2": "L'objectif était d'unifier les travaux réalisés par leur équipe afin de permettre à l’utilisateur de sélectionner et de commander un ou des produit(s). NodeJS à été utile à la réalisation de ce projet."
+  },
+  {
+    "id": 5,
+    "title": "Hot Takes",
+    "project_picture": "/assets/piiquante.jpg",
+    "project_picture_xl": "/assets/xl/piiquante.jpg",
+    "source_code": "https://github.com/DavidPayet/piiquante-web-site",
+    "role": "Développement API",
+    "project_type": "de formation",
+    "description1": "Piiquante est une marque de condiments à base de piment. En tant que développeur freelance, ma mission à été de développer une API sécurisée pour une application d’évaluation de sauces piquantes.",
+    "description2": "L'objectif était de proposer une première version de “galerie de sauces” permettant aux utilisateurs de poster leurs sauces tout en ayant la possibilité d’émettre un avis sous forme de“like/dislike”. L'API à été construit avec NodeJS et utilise MongoDB pour le stockage de données."
+  },
+  {
+    "id": 6,
+    "title": "Groupomania",
+    "project_picture": "/assets/groupomania.jpg",
+    "project_picture_xl": "/assets/xl/groupomania.jpg",
+    "source_code": "https://github.com/DavidPayet/Groupomania",
+    "role": "Développement",
+    "project_type": "de formation",
+    "description1": "Goupomania, spécialisé dans la grande distribution, voulait faire évoluer l'ambiance entre collègue et faciliter les échanges entre leurs départements. En tant que développeur chez CONNECT-E, ma mission a été de produire un première version d'un réseau social interne.",
+    "description2": "L'application est utilisable avec un compte utilisateur avec identifiant unique et mot de passe sécurisé et dispose d'un compte administrateur à la demande de l'entreprise. Le projet a été réalisé en ReactJs pour la partie front-end, NodeJs pour la partie back-end et utilise MongoDB pour le stockage de données."
+  },
+  {
+    "id": 7,
+    "title": "Euler",
+    "project_picture": "/assets/euler.jpg",
+    "project_picture_xl": "/assets/xl/euler.jpg",
+    "project_link": "https://eulerds.com/fr",
+    "role": "Développement",
+    "project_type": "d'entreprise",
+    "description1": "Euler développe des plateformes Big Data de gestion et d'analyse de données, basée sur une base de données graphes unique et renforcée par des capacités d’Intelligence Artificielle pour gérer, explorer et analyser les larges volumes de données de sources hétérogènes au sein de toute institution ou entreprise.",
+    "description2": "Employé en tant que développeur logiciel front-end au sein d'une équipe où la méthode de travail était l'agilité, j'ai pu utiliser VueJs ainsi que Cypress pour les tests. J'ai aussi eu un apperçu du domaine de DevOps avec les concepts de déploiement et intégration continu ainsi que Docker."
+  }
+]
