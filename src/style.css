@@ -96,3 +96,9 @@ h3 {
 .summary-letter {
   display: inline-block;
 }
+
+@media (max-width: 768px) {
+  .underliner:before {
+    height: 2px;
+  }
+}
