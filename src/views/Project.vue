@@ -420,6 +420,10 @@ onMounted(() => {
     font-size: calc(13vw - 10px);
   }
 
+  .project-hero-role {
+    margin-bottom: 50px;
+  }
+
   .caption-title,
   .project-content {
     font-size: 16px;
