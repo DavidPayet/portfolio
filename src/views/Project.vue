@@ -32,6 +32,7 @@
           :alt="findProject.title"
           ref="projectImg"
           rel="preload"
+          :preloadImg="preloadImg"
         />
       </figure>
     </header>
@@ -120,7 +121,17 @@ const summaryMenuTitle = ref(null)
 const summaryMenuContent = ref(null)
 const underline = ref(null)
 
+const preloadImg = (url) => {
+  projects.forEach((project) => {
+    const img = new Image()
+    img.src = url
+    console.log(project.project_picture_xl)
+  })
+}
+
 onMounted(() => {
+  preloadImg(project.project_picture_xl)
+
   const tlProjectHero = gsap.timeline()
 
   tlProjectHero
@@ -409,7 +420,7 @@ onMounted(() => {
   .project-hero-title {
     font-size: calc(13vw - 10px);
   }
-  
+
   .caption-title,
   .project-content {
     font-size: 16px;
