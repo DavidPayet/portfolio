@@ -420,9 +420,6 @@ onMounted(() => {
     margin-bottom: 140px;
   }
 
-  .project-hero-inner {
-    padding-bottom: 100px;
-  }
   .project-hero-title {
     font-size: calc(13vw - 10px);
   }
