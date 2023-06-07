@@ -111,7 +111,7 @@ onMounted(() => {
   max-width: 350px;
   margin: 0 auto 130px;
   line-height: 1;
-  font-size: 90px;
+  font-size: clamp(2.5rem, 1.875rem + 3.125vw, 5.625rem);
   font-weight: 400;
   letter-spacing: -0.0275em;
 }
@@ -128,7 +128,6 @@ onMounted(() => {
 }
 
 .contact-email a {
-  font-size: 18px;
   font-weight: lighter;
   transition: color 0.15s;
 }
@@ -172,16 +171,8 @@ onMounted(() => {
     flex-direction: column;
   }
 
-  .caption-title {
-    font-size: calc(1vw + 0.5em);
-  }
-
   .summary {
     margin: 0 0 90px;
-  }
-
-  .contact-content {
-    font-size: 70px;
   }
 }
 
@@ -194,16 +185,12 @@ onMounted(() => {
   .caption-title.underliner:before {
     width: 100%;
   }
-  .summary-letter {
-    font-size: 14px;
-  }
 
   .summary-title-underline {
     margin-bottom: 20px;
   }
 
   .contact-content {
-    font-size: 40px;
     margin-left: 0;
     margin-bottom: 30px;
   }
@@ -211,16 +198,6 @@ onMounted(() => {
   .contact-email img {
     right: 200px;
     width: 18px;
-  }
-
-  .contact-email a {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 580px) {
-  .summary-letter {
-    font-size: 12px;
   }
 }
 </style>

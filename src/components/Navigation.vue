@@ -41,7 +41,6 @@ onMounted(() => {
 }
 
 .navigation-list-item a {
-  font-size: 20px;
   font-weight: lighter;
   letter-spacing: 0.01em;
   transition: color 0.15s;

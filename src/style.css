@@ -16,6 +16,8 @@ body {
   color: var(--primaryColor);
   font-family: 'Quicksand', sans-serif;
   overflow-x: hidden;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+
 }
 
 .container {
@@ -65,7 +67,6 @@ h3 {
 
 .summary-title {
   padding-bottom: 11px;
-  font-size: 17px;
   font-weight: lighter;
   letter-spacing: 0.07em;
   line-height: 1.7;
@@ -83,7 +84,6 @@ h3 {
 }
 
 .summary-content {
-  font-size: 17px;
   font-weight: lighter;
   letter-spacing: 0.07em;
   line-height: 1.7;

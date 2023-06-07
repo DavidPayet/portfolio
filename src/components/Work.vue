@@ -249,10 +249,6 @@ onMounted(() => {
     flex-direction: column;
   }
 
-  .caption-title {
-    font-size: calc(1vw + 0.5em);
-  }
-
   .work-list-item-title {
     font-size: 70px;
   }
