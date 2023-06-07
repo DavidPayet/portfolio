@@ -324,7 +324,7 @@ onMounted(() => {
 @media (max-width: 768px) {
   .hero-section {
     margin-bottom: 120px;
-    padding-top: 75px;
+    padding-top: 215px;
   }
 
   .hero-caption {
