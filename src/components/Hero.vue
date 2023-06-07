@@ -193,7 +193,6 @@ onMounted(() => {
 }
 
 .hero-content {
-  font-size: 20px;
   font-weight: lighter;
   display: flex;
   justify-content: space-between;
@@ -288,12 +287,10 @@ onMounted(() => {
 
   .hero-caption {
     order: 2;
-    font-size: calc(1vw + 0.5em);
   }
 
   .hero-content {
     order: 4;
-    font-size: calc(1vw + 0.5em);
     display: flex;
     justify-content: space-between;
     margin-left: 0;

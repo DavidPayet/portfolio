@@ -140,7 +140,7 @@ onMounted(() => {
 
 .about-subtitle {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: calc(3vw + 0.4em);
+  font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
   margin: 0 0 65px 360px;
   line-height: 1;
   font-weight: 400;
@@ -151,7 +151,6 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   margin: 0 0 140px 360px;
-  font-size: 20px;
   font-weight: lighter;
   line-height: 1.5;
 }
@@ -185,10 +184,6 @@ onMounted(() => {
     flex-direction: column;
   }
 
-  .caption-title {
-    font-size: calc(1vw + 0.5em);
-  }
-
   .about-caption {
     margin-bottom: 140px;
   }
@@ -198,7 +193,6 @@ onMounted(() => {
   }
 
   .about-content {
-    font-size: calc(1vw + 0.5em);
     margin: 0 0 100px;
   }
 
@@ -226,18 +220,8 @@ onMounted(() => {
     width: 100%;
   }
 
-  .summary-letter {
-    font-size: 14px;
-  }
-
   .summary-title-underline {
     margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 580px) {
-  .summary-letter {
-    font-size: 12px;
   }
 }
 </style>
