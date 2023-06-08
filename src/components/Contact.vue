@@ -13,7 +13,7 @@
 
       <p class="contact-email">
         <img src="/assets/arrow-bottom-right.svg" alt="arrow-bottom-right" />
-        <a :href="connectionContentToSplit[2].link">davidpayet570@gmail.com</a>
+        <a :href="connectionContentToSplit[2].link">david@contact</a>
       </p>
 
       <div class="summary connection">
@@ -92,7 +92,7 @@ onMounted(() => {
   )
   animationOnScroll(
     underline.value,
-    'center 85%',
+    'center 95%',
     'play none none reverse',
     0,
     1,

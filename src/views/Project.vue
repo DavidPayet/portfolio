@@ -227,7 +227,7 @@ onMounted(() => {
   )
   animationOnScroll(
     underline.value,
-    'center 85%',
+    'center 95%',
     'play none none reverse',
     0,
     1,
