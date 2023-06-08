@@ -176,7 +176,11 @@ onMounted(() => {
   font-weight: 400;
   letter-spacing: -0.0275em;
   line-height: 1.1;
-  font-size: 50px;
+  font-size: clamp(
+    1.125rem,
+    0.5096153846153846rem + 3.076923076923077vw,
+    3.125rem
+  );
   width: max-content;
   margin: 0 auto 50px;
 }
@@ -249,10 +253,6 @@ onMounted(() => {
 
   .hero-title {
     font-size: calc(17vw - 15px);
-  }
-
-  .hero-subtitle {
-    font-size: calc(3vw + 0.4em);
   }
 
   .hero-content {

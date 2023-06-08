@@ -55,7 +55,7 @@
     "role": "Développement API",
     "project_type": "de formation",
     "description1": "Piiquante est une marque de condiments à base de piment. En tant que développeur freelance, ma mission à été de développer une API sécurisée pour une application d’évaluation de sauces piquantes.",
-    "description2": "L'objectif était de proposer une première version de “galerie de sauces” permettant aux utilisateurs de poster leurs sauces tout en ayant la possibilité d’émettre un avis sous forme de“like/dislike”. L'API à été construit avec NodeJS et utilise MongoDB pour le stockage de données."
+    "description2": "L'objectif était de proposer une première version de “galerie de sauces” permettant aux utilisateurs de poster leurs sauces tout en ayant la possibilité d’émettre un avis sous forme de “like/dislike”. L'API à été construit avec NodeJS et utilise MongoDB pour le stockage de données."
   },
   {
     "id": 6,
