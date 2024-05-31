@@ -26,7 +26,7 @@
           Professionnelles en tant que Développeur Intégrateur Web ainsi q’une
           première expérience professionnelle de 2 mois.
           <br />
-          Mon attrait pour le domaine persiste et entretien mon envie de relever
+          Mon attrait pour le domaine persiste et entretient mon envie de relever
           de nouveaux défis.
         </p>
       </div>
