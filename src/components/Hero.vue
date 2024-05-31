@@ -1,5 +1,6 @@
 <template>
   <header class="hero-section">
+    <img src="/assets/logo_gold1.svg" alt="logo_dp" class="logo" />
     <div class="container">
       <h1 class="hero-title" ref="title">
         <div
@@ -14,9 +15,9 @@
       </h1>
 
       <h2 class="hero-subtitle" ref="subtitle">
-        Développeur front-end
+        Investi et passionné,
         <br />
-        investi et passionné
+        Recherche une alternance
         <br />
         à Bordeaux, France.
       </h2>
@@ -27,20 +28,20 @@
 
       <div class="hero-content" ref="heroContent">
         <p>
-          Intéressé par tous les aspects du développement web/logiciel, c’est en
-          premier lieu, par affinité, que je porte mon attention sur la parti
-          émmergée de l'iceberg. Plus précisément, le front-end.
+          Passionné par tous les aspects du développement web et logiciel, j'ai
+          commencé mon apprentissage en me concentrant sur la partie visible de
+          l'iceberg : le frontend.
           <br />
-          Attiré par les interfaces visuelles esthétiques et ergonomiques,
-          j’accorde une importance particulière à oeuvrer dans ce sens.
+          Séduit par les interfaces visuelles esthétiques et ergonomiques, je
+          m'efforce de créer des expériences utilisateur de qualité.
         </p>
         <p>
-          Utilisant les langages de programmation les plus courants pour un site
-          web tels que HTML, CSS et JavaScript, j’applique les bonnes pratiques
-          en terme de référencement naturel (SEO).
+          Afin de devenir développeur fullstack et maîtriser l'ensemble des
+          technologies nécessaires à la réalisation de projets complets et
+          performants, je souhaite élargir mes compétences en backend.
           <br />
-          La performance d'un site fait également parti de mes préoccupations,
-          ainsi que son adaptabilité au différents supports.
+          C'est pour cela que je recherche une alternance en tant que Concepteur
+          Développeur d'Applications.
         </p>
       </div>
 
@@ -122,6 +123,13 @@ onMounted(() => {
 .hero-section {
   margin-bottom: 310px;
   padding-top: 190px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  margin: 40px;
 }
 
 .hero-title {
