@@ -9,7 +9,7 @@
       <div class="work-list">
         <article
           class="work-list-item"
-          v-for="(project, index) in projects"
+          v-for="(project, index) in projects.reverse()"
           :key="index"
         >
           <RouterLink
