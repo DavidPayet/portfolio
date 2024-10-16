@@ -14,20 +14,22 @@
 
       <div class="about-content" ref="aboutContent">
         <p>
-          Après 10 années d’expérience militaire, ma curiosité et mon inlassable
-          envie d’apprendre me mènent au métier de développeur informatique.
+          Après dix années d'expérience militaire, ma curiosité et mon désir
+          constant d'apprendre m'ont conduit vers le métier de développeur
+          informatique.
           <br />
-          C’est avec enthousiasme que j'y accorde du temps, avec la volonté de
-          me former continuellement, principalement de manière autonome.
+          C'est avec enthousiasme que je consacre du temps à cette nouvelle
+          passion, en m'engageant à me former en permanence, principalement de
+          manière autonome.
         </p>
         <p>
-          Afin de justifier mes connaissances, je détiens une certification de
-          niveau 5 reconnu au Répertoire National des Certifications
-          Professionnelles en tant que Développeur Intégrateur Web ainsi q’une
-          première expérience professionnelle de 2 mois.
+          Je débute par l'obtention d'une certification de niveau 5
+          en tant que Développeur Intégrateur Web, suivi d'une première
+          expérience professionnelle de deux mois qui m'a permis d'appliquer mes
+          connaissances dans un cadre concret.
           <br />
-          Mon attrait pour le domaine persiste et entretient mon envie de relever
-          de nouveaux défis.
+          Mon intérêt pour ce domaine persiste et alimente ma motivation à
+          relever de nouveaux défis.
         </p>
       </div>
 
@@ -60,7 +62,7 @@ import {
 const summaryTitleToSplit = 'Compétences'
 summaryTitleToSplit.split('')
 
-const summaryContentToSplit = ['JavaScript', 'Vue JS', 'React JS']
+const summaryContentToSplit = ['JavaScript', 'Vue JS', 'React JS', 'Java', 'Spring boot', 'Docker']
 summaryContentToSplit.forEach((item) => {
   item.split('')
 })
