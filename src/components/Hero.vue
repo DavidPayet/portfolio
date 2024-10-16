@@ -15,9 +15,9 @@
       </h1>
 
       <h2 class="hero-subtitle" ref="subtitle">
-        Investi et passionné,
+        Développeur fullstack,
         <br />
-        Recherche une alternance
+        Investi et passionné
         <br />
         à Bordeaux, France.
       </h2>
@@ -28,20 +28,21 @@
 
       <div class="hero-content" ref="heroContent">
         <p>
-          Passionné par tous les aspects du développement web et logiciel, j'ai
-          commencé mon apprentissage en me concentrant sur la partie visible de
-          l'iceberg : le frontend.
+          Bienvenue sur mon portfolio !
           <br />
-          Séduit par les interfaces visuelles esthétiques et ergonomiques, je
-          m'efforce de créer des expériences utilisateur de qualité.
+          Je suis un développeur fullstack passionné, dédié à la création
+          d'applications web simples et fonctionnelles qui répondent aux besoins
+          des utilisateurs.
+          <br />
+          Je propose des solutions pratiques pour résoudre des problèmes
+          quotidiens.
         </p>
         <p>
-          Afin de devenir développeur fullstack et maîtriser l'ensemble des
-          technologies nécessaires à la réalisation de projets complets et
-          performants, je souhaite élargir mes compétences en backend.
+          Je vous invite à explorer mes projets, où chaque réalisation reflète
+          mon désir d'apprendre et d'améliorer continuellement mes compétences.
           <br />
-          C'est pour cela que je recherche une alternance en tant que Concepteur
-          Développeur d'Applications.
+          N'hésitez pas à me contacter si vous souhaitez échanger des idées ou
+          discuter de collaborations potentielles.
         </p>
       </div>
 
