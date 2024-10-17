@@ -18,8 +18,7 @@ const routes = [
 
 const scrollBehavior = (to, from, savedPosition) => {
   return savedPosition ||
-    to.meta?.scrollPos ||
-    { top: 0 }
+    to.meta?.scrollPos
 }
 
 const router = createRouter({

@@ -135,10 +135,12 @@ onMounted(() => {
   top: 50%;
   filter: sepia(95%) brightness(50%);
   height: 40vh;
-  border-radius: 5px;
+  width: 400px;
   object-fit: cover;
   transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  border-radius: 50%;
+  box-shadow: 0px 0px 1px 0px #fff;
+  -webkit-box-shadow: 0px 0px 1px 0px #fff;
+  -moz-box-shadow: 0px 0px 1px 0px #fff;
 }
 
 .work-list-item-title {
