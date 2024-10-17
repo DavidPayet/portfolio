@@ -12,40 +12,21 @@
           v-for="(project, index) in projects.reverse()"
           :key="index"
         >
-          <RouterLink
-            :to="{
-              name: 'Project',
-              params: { id: project.id },
-            }"
-            data-link
-            class="work-list-item-inner"
-          >
-            <img
-              class="work-picture"
-              :src="project.project_picture"
-              :alt="project.title"
-              ref="workPicture"
-            />
-          </RouterLink>
+          <img
+            class="work-picture"
+            :src="project.project_picture"
+            :alt="project.title"
+            ref="workPicture"
+          />
 
           <h4 class="work-list-item-title">
-            <RouterLink
-              :to="{
-                name: 'Project',
-                params: { id: project.id },
-              }"
-              data-link
-              :data-title="project.title"
-              ref="allWorkTitle"
+            <div
+              class="work-title-letter"
+              v-for="title in project.title"
+              :key="title"
             >
-              <div
-                class="work-title-letter"
-                v-for="title in project.title"
-                :key="title"
-              >
-                <span v-for="letter in title" :key="letter">{{ letter }}</span>
-              </div>
-            </RouterLink>
+              <span v-for="letter in title" :key="letter">{{ letter }}</span>
+            </div>
           </h4>
 
           <p class="work-list-item-role" ref="role">{{ project.role }}</p>
@@ -80,22 +61,6 @@ const workPicture = ref([])
 const role = ref([])
 
 onMounted(() => {
-  const articles = document.querySelectorAll('.work-list-item')
-  const titleToHover = document.querySelectorAll('.work-list-item-title')
-
-  articles.forEach((article, i) => {
-    titleToHover[i].addEventListener('mouseover', () => {
-      workPicture.value[i].style.filter =
-        'sepia(80%) brightness(50%) hue-rotate(290deg)'
-      workPicture.value[i].style.transform = 'scale(.98)'
-    })
-
-    titleToHover[i].addEventListener('mouseleave', () => {
-      workPicture.value[i].style.filter = ''
-      workPicture.value[i].style.transform = ''
-    })
-  })
-
   animationOnScroll(
     captionTitle.value.children,
     'center 90%',
@@ -110,7 +75,7 @@ onMounted(() => {
   underlineAnimation(captionTitle.value, 'center 85%')
 
   allWorkTitle.value = Array.from(
-    document.querySelectorAll('.work-list-item-title a')
+    document.querySelectorAll('.work-list-item-title')
   )
 
   allWorkTitle.value.forEach((workTitleLetterAnim) => {
@@ -176,12 +141,6 @@ onMounted(() => {
   border-radius: 50%;
 }
 
-.work-picture:hover {
-  border-radius: 0;
-  transform: scale(0.98) !important;
-  filter: sepia(80%) brightness(50%) hue-rotate(290deg);
-}
-
 .work-list-item-title {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -190,12 +149,10 @@ onMounted(() => {
   margin: 0 auto 40px;
   height: 99px;
   letter-spacing: -0.01em;
-}
-
-.work-list-item-title a {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  cursor: default;
 }
 
 .work-title-letter span {

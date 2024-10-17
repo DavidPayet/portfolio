@@ -11,13 +11,16 @@
   --underlineWidth: 270px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0f0d0d;
   color: var(--primaryColor);
   font-family: 'Quicksand', sans-serif;
   overflow-x: hidden;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
-
 }
 
 .container {
