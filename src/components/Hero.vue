@@ -1,6 +1,6 @@
 <template>
   <header class="hero-section">
-    <img src="/assets/logo_gold1.svg" alt="logo_dp" class="logo" />
+    <img src="/assets/logo.svg" alt="logo_dp" class="logo" />
     <div class="container">
       <h1 class="hero-title" ref="title">
         <div
