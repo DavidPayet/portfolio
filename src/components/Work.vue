@@ -175,7 +175,11 @@ onMounted(() => {
 
 .button {
   letter-spacing: 0.15em;
-  transition: color 0.15s, letter-spacing 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
   position: relative;
   font-weight: lighter;
   text-transform: uppercase;
@@ -185,6 +189,7 @@ onMounted(() => {
   color: #ee8c8c;
   letter-spacing: 0.3em;
   font-weight: 400;
+  transform: translateZ(0) scale(1.1);
 }
 
 .button-text:before {
