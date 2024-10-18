@@ -184,6 +184,7 @@ onMounted(() => {
   .container {
     display: flex;
     flex-direction: column;
+    margin-top: 190px;
   }
 
   .about-caption {
