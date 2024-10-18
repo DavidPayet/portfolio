@@ -12,12 +12,14 @@
           v-for="(project, index) in projects.reverse()"
           :key="index"
         >
-          <img
-            class="work-picture"
-            :src="project.project_picture"
-            :alt="project.title"
-            ref="workPicture"
-          />
+          <div class="image-container" ref="imageContainers">
+            <div class="border-lightning"></div>
+            <img
+              class="work-picture"
+              :src="project.project_picture"
+              :alt="project.title"
+            />
+          </div>
 
           <h4 class="work-list-item-title">
             <div
@@ -48,7 +50,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import {
   animationOnScroll,
   underlineAnimation,
@@ -57,8 +59,27 @@ import projects from '@/data/projects.json'
 
 const captionTitle = ref(null)
 const allWorkTitle = ref([])
-const workPicture = ref([])
 const role = ref([])
+const imageContainers = ref([])
+
+const handleMouseMove = (e) => {
+  imageContainers.value.forEach((container) => {
+    const rect = container.getBoundingClientRect()
+    const centerX = rect.left + rect.width / 2
+    const centerY = rect.top + rect.height / 2
+
+    const distanceX = e.clientX - centerX
+    const distanceY = e.clientY - centerY
+    const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY)
+
+    const maxDistance = Math.max(rect.width, rect.height)
+    const intensity = Math.max(0, 1.5 - distance / maxDistance)
+
+    container.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`)
+    container.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`)
+    container.style.setProperty('--intensity', intensity.toFixed(2))
+  })
+}
 
 onMounted(() => {
   animationOnScroll(
@@ -96,11 +117,17 @@ onMounted(() => {
     animationOnScroll(role, 'center 85%', 'play none none reverse', 30, 0, 0.8)
   })
 
-  workPicture.value = document.querySelectorAll('.work-picture')
+  if (window.matchMedia('(pointer:fine)').matches) {
+    imageContainers.value = document.querySelectorAll('.image-container')
+    imageContainers.value.forEach((img) => {
+      animationOnScroll(img, 'center 95%', 'play none none reverse', 30, 0, 0.5)
+    })
+    document.addEventListener('mousemove', handleMouseMove)
+  }
+})
 
-  workPicture.value.forEach((pic) => {
-    animationOnScroll(pic, 'center 95%', 'play none none reverse', 30, 0, 0.5)
-  })
+onUnmounted(() => {
+  document.removeEventListener('mousemove', handleMouseMove)
 })
 </script>
 
@@ -116,31 +143,51 @@ onMounted(() => {
   text-align: center;
 }
 
-.work-list-item:nth-child(4n + 1) .work-picture {
-  left: 0;
+.image-container {
+  position: absolute;
+  top: 50%;
+  height: calc(40vh + 2px);
+  width: 400px;
+  overflow: visible;
 }
 
-.work-list-item:nth-child(even) .work-picture {
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-}
-
-.work-list-item:nth-child(4n + 3) .work-picture {
-  right: 0;
+@media (pointer: fine) {
+  .border-lightning {
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    left: -2px;
+    top: -2px;
+    background: radial-gradient(
+      circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, calc(0.8 * var(--intensity))),
+      transparent 50%
+    );
+    opacity: var(--intensity);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 1px;
+  }
 }
 
 .work-picture {
-  position: absolute;
-  top: 50%;
-  filter: sepia(95%) brightness(50%);
-  height: 40vh;
-  width: 400px;
+  position: relative;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  filter: sepia(95%) brightness(50%);
   transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  box-shadow: 0px 0px 1px 0px #fff;
-  -webkit-box-shadow: 0px 0px 1px 0px #fff;
-  -moz-box-shadow: 0px 0px 1px 0px #fff;
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.work-list-item:nth-child(odd) .image-container {
+  left: 0;
+}
+
+.work-list-item:nth-child(even) .image-container {
+  right: 0;
 }
 
 .work-list-item-title {
@@ -171,6 +218,7 @@ onMounted(() => {
   margin: 0 auto 100px;
   cursor: default;
   width: max-content;
+  z-index: 9;
 }
 
 .button {
@@ -183,6 +231,7 @@ onMounted(() => {
   position: relative;
   font-weight: lighter;
   text-transform: uppercase;
+  z-index: 9;
 }
 
 .button:hover {
@@ -213,6 +262,21 @@ onMounted(() => {
     flex-direction: column;
   }
 
+  .caption-title {
+    margin-bottom: 95px;
+  }
+
+  .work-list-item:not(:nth-child(1)) {
+    margin-top: 90px;
+  }
+
+  .image-container {
+    width: calc(70vw);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
   .work-list-item-title {
     font-size: 70px;
   }
@@ -228,15 +292,17 @@ onMounted(() => {
     width: 100%;
   }
 
-  .work-list-item-title {
-    font-size: 40px;
+  .work-list-item {
+    margin-top: 0;
+    margin-bottom: 240px;
   }
 
-  .work-picture {
-    width: calc(70vw);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+  .work-list-item:nth-child(1) {
+    margin-top: 50px;
+  }
+
+  .work-list-item-title {
+    font-size: 40px;
   }
 }
 </style>
