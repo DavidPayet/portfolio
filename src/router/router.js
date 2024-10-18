@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
@@ -10,21 +10,26 @@ const routes = [
     path: '/project/:id',
     name: 'Project',
     component: () => import('@/views/Project.vue'),
-    meta: {
-      scrollTop: 0
-    },
-  }
+  },
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {
-  return savedPosition ||
-    to.meta?.scrollPos
+  if (savedPosition) {
+    return savedPosition
+  } else if (to.hash) {
+    return {
+      el: to.hash,
+      behavior: 'smooth',
+    }
+  } else {
+    return { top: 0, behavior: 'instant' }
+  }
 }
 
 const router = createRouter({
   history: createWebHistory(),
   routes: routes,
-  scrollBehavior
+  scrollBehavior,
 })
 
 export default router
