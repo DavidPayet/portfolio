@@ -9,7 +9,7 @@
       <div class="work-list">
         <article
           class="work-list-item"
-          v-for="(project, index) in projects.reverse()"
+          v-for="(project, index) in projects"
           :key="index"
         >
           <div class="image-container" ref="imageContainers">
@@ -39,6 +39,7 @@
               name: 'Project',
               params: { id: project.id },
             }"
+            @click="saveScrollPosition"
             data-link
           >
             <span class="button-text">Voir le projet</span>
@@ -56,6 +57,11 @@ import {
   underlineAnimation,
 } from '@/composables/animationOnScroll'
 import projects from '@/data/projects.json'
+
+const saveScrollPosition = () => {
+  const scrollY = window.scrollY
+  sessionStorage.setItem('scrollPosition', scrollY)
+}
 
 const captionTitle = ref(null)
 const allWorkTitle = ref([])
