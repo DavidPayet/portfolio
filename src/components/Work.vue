@@ -170,7 +170,7 @@ onUnmounted(() => {
       transparent 50%
     );
     opacity: var(--intensity);
-    transition: opacity 0.3s ease;
+    transition: none;
     pointer-events: none;
     z-index: 1;
     border-radius: 1px;
@@ -183,7 +183,7 @@ onUnmounted(() => {
   height: 100%;
   object-fit: cover;
   filter: sepia(95%) brightness(50%);
-  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: none;
   z-index: 2;
   border-radius: 2px;
 }
