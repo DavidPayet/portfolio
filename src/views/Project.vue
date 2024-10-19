@@ -317,6 +317,7 @@ onMounted(() => {
 }
 
 .project-image img {
+  will-change: opacity, filter;
   height: 100%;
   left: 0;
   margin: 0;
@@ -326,6 +327,7 @@ onMounted(() => {
   width: 100%;
   filter: sepia(95%) brightness(100%);
   object-fit: cover;
+  transition: none;
 }
 
 .project-image:before {
