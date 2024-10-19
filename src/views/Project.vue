@@ -68,8 +68,15 @@
         <div class="summary-title-underline" ref="underline"></div>
 
         <ul class="summary-content project" ref="summaryMenuContent">
-          <li v-for="item in menuItemToSplit">
-            <a :href="item.link" class="summary-letter">
+          <li v-for="item in menuItemToSplit" :key="item.name">
+            <a
+              v-if="item.name !== 'Retour'"
+              :href="item.link"
+              class="summary-letter"
+            >
+              {{ item.name }}
+            </a>
+            <a v-else @click="goBackToHome" class="summary-letter">
               {{ item.name }}
             </a>
           </li>
@@ -82,7 +89,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import projects from '@/data/projects.json'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { gsap } from 'gsap'
 import {
   animationOnScroll,
@@ -90,25 +97,29 @@ import {
 } from '@/composables/animationOnScroll'
 
 const route = useRoute()
-
 const findProject = projects.find((p) => p.id === parseInt(route.params.id))
+
+let nextProject = parseInt(route.params.id)
+if (nextProject > 1) {
+  nextProject -= 1
+} else {
+  nextProject = projects.length
+}
+
+const router = useRouter()
+const goBackToHome = () => {
+  sessionStorage.getItem('scrollPosition')
+  router.push('/')
+}
 
 const summaryTitleToSplit = 'Menu'
 summaryTitleToSplit.split('')
 
-let nextProject = parseInt(route.params.id)
-
-if (nextProject < projects.length) {
-  nextProject += 1
-} else {
-  nextProject = 1
-}
-
-const menuItemToSplit = [
+const menuItemToSplit = ref([
   { name: 'Projet Suivant', link: `/project/${nextProject}` },
   { name: 'Contact', link: 'mailto:davidpayet570@gmail.com' },
-  { name: 'Retour', link: `/` },
-]
+  { name: 'Retour' },
+])
 
 const projectTitle = ref([])
 const role = ref(null)
